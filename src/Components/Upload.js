@@ -8,7 +8,7 @@ const useReader = useEventTarget(new FileReader());
 export default props => {
   const [, setText] = useProvided(TextContainer);
   const [reader] = useReader("load", evt => {
-    if (evt.target.readyState != 2) return;
+    if (evt.target.readyState !== 2) return;
     if (evt.target.error) {
       alert("Error while reading file");
       return;

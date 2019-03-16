@@ -8,13 +8,14 @@ export const initialText = `
 \`\`\`
 
 ## How to use md2pdf?
-1. Click button Upload .md file
-2. Edit in editor (left panel)
-3. If preview is great, click **PDF this**!
+1. Click button choose \`.md\` file
+2. Edit in editor (left panel).
+3. Click **Transform**!
 4. **Chrome recommended**
 
-## Tip
-- After click \`Transfom\` button, inverse the checkbox of 'Headers and Footers' 
+## Tips
+- \`Resize\` the layout what you want.
+- After click \`Transfom\` button, inverse the checkbox of **'Headers and Footers'**. 
 - **反選頁首與頁尾**.
 
 ## What's special?
@@ -28,6 +29,7 @@ export const initialText = `
 
 ## Code Like this
 \`\`\`javascript
+// index.js
 function Hello(){
   console.log('World!')
 }
@@ -37,6 +39,7 @@ Hello();
 or this
 
 \`\`\`python
+# main.py
 def awesome():
     print('awesome!')
 awesome()
