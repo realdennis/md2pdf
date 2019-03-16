@@ -7102,13 +7102,6 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-persist-hook@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/persist-hook/-/persist-hook-0.0.1.tgz#5331c3dbee439ab3c051064d4698f19c450c0048"
-  integrity sha512-75sLoikiUa1XWiRrzfRb1DamsgOSohta1bJWIlxrQkhJYgL0QKlBrl+2A+bNy4npKOo4SJ3KqEyQzynjpAsSpg==
-  dependencies:
-    store "^2.0.12"
-
 pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -9123,11 +9116,6 @@ stealthy-require@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
-
-store@^2.0.12:
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/store/-/store-2.0.12.tgz#8c534e2a0b831f72b75fc5f1119857c44ef5d593"
-  integrity sha1-jFNOKguDH3K3X8XxEZhXxE711ZM=
 
 stream-browserify@^2.0.1:
   version "2.0.2"
