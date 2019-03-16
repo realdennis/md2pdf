@@ -1,0 +1,16 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+}
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
