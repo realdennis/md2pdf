@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 const EditArea = styled.textarea`
   display: block;
   height: 100%;
@@ -10,17 +10,20 @@ const EditArea = styled.textarea`
   line-height: 1.25;
   background-color: inherit;
   color: inherit;
+  caret-color: pink;
 `;
-const Editor = ({ text, setText, onAreaChange, children }) => {
+const Editor = ({ text, setText, children }) => {
   const keyUpHandler = e => {
-    if (e.key === "Tab") {
+    if (e.key === 'Tab') {
       e.preventDefault();
-      let start = e.target.selectionStart;
-      let end = e.target.selectionEnd;
-      //console.log(start, end);
-      //console.log(text[start], text[end]);
-      const newText = text.substring(0, start) + "\t" + text.substring(end);
+      const textarea = e.target;
+      let start = textarea.selectionStart;
+      let end = textarea.selectionEnd;
+      const newText = text.substring(0, start) + '\t' + text.substring(end);
       setText(newText);
+      setTimeout(
+        () => (textarea.selectionStart = textarea.selectionEnd = start + 1)
+      );
     }
   };
   const changeHandler = e => setText(e.target.value);

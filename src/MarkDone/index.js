@@ -48,7 +48,7 @@ export default styled(MarkDone)`
     padding-bottom: 20px;
   }
   .wrapper.black {
-    background-color: black;
+    background-color: #282c35;
     color: rgb(204, 204, 204);
   }
   .wrapper.preview {
