@@ -12,7 +12,7 @@ const EditArea = styled.textarea`
   color: inherit;
   caret-color: pink;
   &::selection{
-    background-color:pink;
+    background-color:#0abde3;
     color:white;
   }
 `;
