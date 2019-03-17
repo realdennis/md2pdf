@@ -9,6 +9,9 @@ body,
   flex-direction: column;
 }
 @media print {
+  html{
+    height:auto;
+  }
   .no-print,
   .no-print * {
     display: none !important;
