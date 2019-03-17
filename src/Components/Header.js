@@ -1,10 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import UploadButton from "./Upload.js";
+import React from 'react';
+import styled from 'styled-components';
+import GitHubButton from 'react-github-btn';
+import UploadButton from './Upload.js';
 const Header = ({ className }) => {
   return (
-    <header className={className + " no-print"}>
-      <p className="project"> Markdown2PDF </p>
+    <header className={className + ' no-print'}>
+      <p className="project"> Markdown to PDF </p>
+      <GitHubButton
+        href="https://github.com/realdennis/md2pdf"
+        aria-label="Star realdennis/md2pdf on GitHub"
+      >
+        Star
+      </GitHubButton>
 
       <div className="menu">
         <UploadButton className="button upload" />
@@ -34,6 +41,8 @@ export default styled(Header)`
   height: 40px;
   p.project {
     font-weight: bold;
+    margin:5px;
+    flex-shrink:0;
   }
   div.menu {
     width: 100%;
