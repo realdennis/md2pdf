@@ -1,15 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { useProvided } from "nonaction";
-import { TextContainer } from "../Container";
-import Preview from "./Preview.js";
-import Editor from "./Editor.js";
-const SplitLine = styled.div`
-  background-color: black;
-  width: 1px;
-  opacity: 0.3;
-  height: 100%;
-`;
+import React from 'react';
+import styled from 'styled-components';
+import { useProvided } from 'nonaction';
+import { TextContainer } from '../../Container';
+import Preview from './Preview.js';
+import Editor from './Editor.js';
 
 const MarkDone = ({ className }) => {
   const [text, setText] = useProvided(TextContainer);
@@ -22,7 +16,6 @@ const MarkDone = ({ className }) => {
           {text}
         </Editor>
       </div>
-      <SplitLine />
       <div className="wrapper preview">
         <Preview>{text}</Preview>
       </div>
@@ -54,7 +47,7 @@ export default styled(MarkDone)`
   .wrapper.preview {
     @media print {
       padding: 0;
-      overflow-y:hidden;
+      overflow-y: hidden;
     }
   }
 `;
