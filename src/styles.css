@@ -7,6 +7,7 @@ body,
 .App {
   display: flex;
   flex-direction: column;
+  font-family: 微軟正黑體;
 }
 @media print {
   html{

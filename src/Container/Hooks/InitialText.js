@@ -1,6 +1,6 @@
 export const initialText = `
 # Markdown2PDF 
-
+https://md2pdf.netlify.com/
 > Awesome Markdown to PDF!
 \`\`\`diff
 - Online? Upload resume.md to stranger server?
@@ -8,9 +8,10 @@ export const initialText = `
 \`\`\`
 
 ## How to use md2pdf?
-1. Click button choose \`.md\` file
+1. Click button choose \`.md\` file.
 2. Edit in editor (left panel).
 3. Click **Transform**!
+4. Switch 'Destination' to **Save as PDF**.
 4. **Chrome recommended**
 
 ## Tips
