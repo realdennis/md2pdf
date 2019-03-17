@@ -7,10 +7,14 @@ const EditArea = styled.textarea`
   resize: none;
   outline: none;
   border: none;
-  line-height: 1.25;
+  line-height: 1.5;
   background-color: inherit;
   color: inherit;
   caret-color: pink;
+  &::selection{
+    background-color:pink;
+    color:white;
+  }
 `;
 const Editor = ({ text, setText, children }) => {
   const keyUpHandler = e => {
