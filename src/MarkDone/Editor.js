@@ -34,6 +34,7 @@ const Editor = ({ text, setText, children }) => {
 
   return (
     <EditArea
+      spellCheck={false}
       onChange={changeHandler}
       onKeyDown={keyUpHandler}
       name="editor"
