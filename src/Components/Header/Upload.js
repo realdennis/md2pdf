@@ -1,7 +1,7 @@
 import React from "react";
 import useEventTarget from "use-event-target";
 import { useProvided } from "nonaction";
-import { TextContainer } from "../Container";
+import { TextContainer } from "../../Container";
 
 const useReader = useEventTarget(new FileReader());
 
