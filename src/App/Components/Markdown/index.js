@@ -4,7 +4,7 @@ import { useProvided } from 'nonaction';
 import { TextContainer } from '../../Container';
 import Preview from './Preview.js';
 import Editor from './Editor.js';
-
+import 'github-markdown-css';
 const MarkDone = ({ className }) => {
   const [text, setText] = useProvided(TextContainer);
   //const onAreaChange = e => setText(e.target.value);
@@ -16,7 +16,7 @@ const MarkDone = ({ className }) => {
           {text}
         </Editor>
       </div>
-      <div className="wrapper preview">
+      <div className="wrapper preview markdown-body">
         <Preview>{text}</Preview>
       </div>
     </div>
@@ -39,10 +39,10 @@ export default styled(MarkDone)`
   .wrapper.editor {
     padding-left: 15px;
     padding-bottom: 20px;
-  }
-  .wrapper.black {
-    background-color: #282c35;
-    color: rgb(204, 204, 204);
+    &.black {
+      background-color: #282c35;
+      color: rgb(204, 204, 204);
+    }
   }
   .wrapper.preview {
     @media print {
