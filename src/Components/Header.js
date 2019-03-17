@@ -31,6 +31,7 @@ export default styled(Header)`
   * {
     box-sizing: border-box;
   }
+  flex-shrink:0;
   overflow:auto;
   -webkit-overflow-scrolling:touch;
   user-select: none;
