@@ -5,7 +5,7 @@ import UploadButton from './Upload.js';
 const Header = ({ className }) => {
   return (
     <header className={className + ' no-print'}>
-      <p className="project"> Markdown to PDF </p>
+      <p className="project"> md2pdf </p>
       <GitHubButton
         href="https://github.com/realdennis/md2pdf"
         aria-label="Star realdennis/md2pdf on GitHub"
@@ -31,6 +31,8 @@ export default styled(Header)`
   * {
     box-sizing: border-box;
   }
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
   user-select: none;
   padding-left: 5px;
   padding-right: 5px;
