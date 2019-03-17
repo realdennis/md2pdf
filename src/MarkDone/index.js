@@ -54,6 +54,7 @@ export default styled(MarkDone)`
   .wrapper.preview {
     @media print {
       padding: 0;
+      overflow-y:hidden;
     }
   }
 `;
