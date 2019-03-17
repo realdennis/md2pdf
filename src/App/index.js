@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Header, Markdown } from './Components';
 import { Provider } from 'nonaction';
 import { TextContainer } from './Container';
-const App = ({className}) => {
+const App = ({ className }) => {
   return (
     <div className={className} id="md2pdf-app">
       <Provider inject={[TextContainer]}>
@@ -19,8 +19,11 @@ export default styled(App)`
   flex-direction: column;
   font-family: 微軟正黑體;
   @media print {
-    html {
+    &,
+    div {
+      display: block;
       height: auto;
+      /* Reset to normalize for FireFox */
     }
     .no-print,
     .no-print * {
