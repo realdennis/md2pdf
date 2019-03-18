@@ -27,6 +27,7 @@ export default props => {
         type="file"
         style={{ display: "none" }}
         onChange={onChange}
+        accept=".md"
       />
       <label
         htmlFor="mdFile"
