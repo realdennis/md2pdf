@@ -18,6 +18,13 @@ export default props => {
   });
   const onChange = e => {
     const files = e.currentTarget.files;
+    // check md file extension
+    let filename = files[0].name;
+    let ans = (/\.(md)$/i).test(filename)
+    if (!ans) {
+      alert("File type error, only support md file");
+      return;
+    }
     files.length > 0 && reader.readAsText(files[0]);
   };
   return (
