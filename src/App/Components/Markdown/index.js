@@ -5,7 +5,7 @@ import { TextContainer } from '../../Container';
 import Preview from './Preview.js';
 import Editor from './Editor.js';
 import 'github-markdown-css';
-const MarkDone = ({ className }) => {
+const Markdown = ({ className }) => {
   const [text, setText] = useProvided(TextContainer);
   //const onAreaChange = e => setText(e.target.value);
 
@@ -23,7 +23,7 @@ const MarkDone = ({ className }) => {
   );
 };
 
-export default styled(MarkDone)`
+export default styled(Markdown)`
   * {
     box-sizing: border-box;
   }
