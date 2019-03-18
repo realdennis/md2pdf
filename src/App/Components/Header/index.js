@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import GitHubButton from 'react-github-btn';
 import UploadButton from './Upload.js';
 const Header = ({ className }) => {
   return (
     <header className={className + ' no-print'}>
       <p className="project"> md2pdf </p>
-      <GitHubButton
-        href="https://github.com/realdennis/md2pdf"
-        aria-label="Star realdennis/md2pdf on GitHub"
-      >
-        Star
-      </GitHubButton>
+      <iframe
+        title="github-button"
+        className="project"
+        style={{ display: 'block' }}
+        src="https://ghbtns.com/github-btn.html?user=realdennis&repo=md2pdf&type=star&count=true"
+        frameBorder="0"
+        scrolling="0"
+        width="100px"
+        height="20px"
+      />
 
       <div className="menu">
         <UploadButton className="button upload" />
@@ -31,9 +34,9 @@ export default styled(Header)`
   * {
     box-sizing: border-box;
   }
-  flex-shrink:0;
-  overflow:auto;
-  -webkit-overflow-scrolling:touch;
+  flex-shrink: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   user-select: none;
   padding-left: 5px;
   padding-right: 5px;
@@ -42,10 +45,11 @@ export default styled(Header)`
   display: flex;
   align-items: center;
   height: 40px;
-  p.project {
+  .project {
     font-weight: bold;
-    margin:5px;
-    flex-shrink:0;
+    margin: 5px;
+    flex-shrink: 0;
+    height: 20px;
   }
   div.menu {
     width: 100%;
