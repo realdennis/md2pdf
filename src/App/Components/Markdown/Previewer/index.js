@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 export default ({ source, children }) => {
   return (
-    <Wrapper className="wrapper preview  markdown-body">
+    <Wrapper className="preview  markdown-body">
       <Preview source={source}>{children}</Preview>
     </Wrapper>
   );

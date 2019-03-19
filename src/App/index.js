@@ -17,7 +17,7 @@ export default styled(App)`
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: 微軟正黑體;
+  font-family: 微軟正黑體, sans-serif;
   @media print {
     &,
     div {
