@@ -1,24 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useProvided } from 'nonaction';
 import { TextContainer } from '../../Container';
-import Preview from './Preview.js';
-import Editor from './Editor.js';
+import Previewer from './Previewer';
+import Editor from './Editor';
+import DragBar from './DragBar.js';
 import 'github-markdown-css';
 const Markdown = ({ className }) => {
   const [text, setText] = useProvided(TextContainer);
-  //const onAreaChange = e => setText(e.target.value);
-
+  const [isDrag, setDrag] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth / 2);
   return (
-    <div className={className}>
-      <div className="wrapper editor black no-print">
-        <Editor text={text} setText={setText}>
-          {text}
-        </Editor>
-      </div>
-      <div className="wrapper preview markdown-body">
-        <Preview>{text}</Preview>
-      </div>
+    <div
+      className={className}
+      onMouseMove={e => {
+        if (!isDrag) return;
+        const pageX = e.nativeEvent.pageX;
+        setWidth(pageX - startX);
+      }}
+    >
+      <Editor className="no-print" width={width} text={text} setText={setText}>
+        {text}
+      </Editor>
+      <DragBar
+        className="no-print"
+        isDrag={isDrag}
+        setDrag={setDrag}
+        setStartX={setStartX}
+      />
+      <Previewer>{text}</Previewer>
     </div>
   );
 };
@@ -29,25 +40,4 @@ export default styled(Markdown)`
   }
   height: 100%;
   display: flex;
-  .wrapper {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  }
-  .wrapper.editor {
-    padding-left: 15px;
-    padding-bottom: 20px;
-    &.black {
-      background-color: #282c35;
-      color: rgb(204, 204, 204);
-    }
-  }
-  .wrapper.preview {
-    @media print {
-      padding: 0;
-      overflow-y: hidden;
-    }
-  }
 `;

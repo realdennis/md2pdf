@@ -1,22 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-const EditArea = styled.textarea`
-  display: block;
-  height: 100%;
-  width: 100%;
-  resize: none;
-  outline: none;
-  border: none;
-  line-height: 1.5;
-  background-color: inherit;
-  color: inherit;
-  caret-color: pink;
-  &::selection{
-    background-color:#0abde3;
-    color:white;
-  }
-`;
-const Editor = ({ text, setText, children }) => {
+
+const Editor = ({ className, text, setText, children }) => {
   const keyUpHandler = e => {
     if (e.key === 'Tab') {
       e.preventDefault();
@@ -33,7 +18,8 @@ const Editor = ({ text, setText, children }) => {
   const changeHandler = e => setText(e.target.value);
 
   return (
-    <EditArea
+    <textarea
+      className={className}
       spellCheck={false}
       onChange={changeHandler}
       onKeyDown={keyUpHandler}
@@ -44,4 +30,19 @@ const Editor = ({ text, setText, children }) => {
   );
 };
 
-export default Editor;
+export default styled(Editor)`
+  display: block;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: none;
+  line-height: 1.5;
+  background-color: inherit;
+  color: inherit;
+  caret-color: pink;
+  &::selection {
+    background-color: #0abde3;
+    color: white;
+  }
+`;
