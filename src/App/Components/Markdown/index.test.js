@@ -11,7 +11,6 @@ describe('[Comp.] <Markdown /> should work as expected', () => {
       </Provider>
     );
     wrapper
-      .find('.editor')
       .find('textarea')
       .simulate('change', { target: { value: '# work' } });
     expect(
