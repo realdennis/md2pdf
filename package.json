@@ -20,9 +20,8 @@
     "use-event-target": "^1.2.0"
   },
   "devDependencies": {
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
     "react-hooks-testing-library": "^0.3.7",
+    "react-testing-library": "^6.0.1",
     "source-map-explorer": "^1.8.0"
   },
   "scripts": {
