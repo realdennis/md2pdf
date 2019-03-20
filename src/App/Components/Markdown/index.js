@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useProvided } from 'nonaction';
 import { TextContainer } from '../../Container';
-// import Previewer from './Previewer';
+import Previewer from './Previewer';
 import Editor from './Editor';
 import DragBar from './DragBar.js';
 import 'github-markdown-css';
-const LazyPreviewer = React.lazy(() => import('./Previewer'));
 const Markdown = ({ className }) => {
   const [text, setText] = useProvided(TextContainer);
   const [isDrag, setDrag] = useState(false);
@@ -30,10 +29,7 @@ const Markdown = ({ className }) => {
         setDrag={setDrag}
         setStartX={setStartX}
       />
-      <React.Suspense fallback={<p>Waiting...</p>}>
-        <LazyPreviewer>{text}</LazyPreviewer>
-      </React.Suspense>
-      {/* <Previewer>{text}</Previewer> */}
+      <Previewer>{text}</Previewer>
     </div>
   );
 };
