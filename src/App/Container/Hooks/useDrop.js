@@ -1,24 +1,28 @@
 import { useEffect, useState } from 'react';
 
-function preventDefault(e) {
-  e.preventDefault();
-}
-
 function useDrop(ref, onLoad = () => {}) {
   const [uploading, setUploading] = useState(false);
   const [isOver, setOver] = useState(false);
-  function onDragLeave() {
-    setOver(false);
-  }
-  function onDragOver() {
+  const stopDefault = e => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+  const dragOverHandler = e => {
     setOver(true);
-  }
-  function onDrop(e) {
+    stopDefault(e);
+  };
+  const dragLeaveHandler = e => {
     setOver(false);
-    handleUpload(e.dataTransfer.files);
-  }
-  function handleUpload(files) {
-    if (files && files[0] && !uploading) {
+    stopDefault(e);
+  };
+  const uploadHandler = files => {
+    if (
+      files &&
+      files[0] &&
+      files[0].name &&
+      /\.(md)$/i.test(files[0].name) &&
+      !uploading
+    ) {
       const reader = new FileReader();
       reader.onload = e => {
         setUploading(false);
@@ -27,21 +31,24 @@ function useDrop(ref, onLoad = () => {}) {
       reader.readAsText(files[0]);
       setUploading(true);
     }
-  }
+  };
+  const dropHandler = e => {
+    setOver(false);
+    stopDefault(e);
+    uploadHandler(e.dataTransfer.files);
+  };
   useEffect(() => {
     const target = ref.current;
     if (!target) return;
-    target.addEventListener('dragover', onDragOver);
-    target.addEventListener('dragleave', onDragLeave);
-    target.addEventListener('drop', onDrop);
-    window.addEventListener('dragover', preventDefault);
-    window.addEventListener('drop', preventDefault);
+    target.addEventListener('dragenter', stopDefault, true);
+    target.addEventListener('dragover', dragOverHandler, true);
+    target.addEventListener('dragleave', dragLeaveHandler, true);
+    target.addEventListener('drop', dropHandler, true);
     return () => {
-      target.removeEventListener('dragover', onDragOver);
-      target.removeEventListener('dragleave', onDragLeave);
-      target.removeEventListener('drop', onDrop);
-      window.removeEventListener('dragover', preventDefault);
-      window.removeEventListener('drop', preventDefault);
+      target.addEventListener('dragenter', stopDefault);
+      target.removeEventListener('dragover', dragOverHandler);
+      target.removeEventListener('dragleave', dragLeaveHandler);
+      target.removeEventListener('drop', dropHandler);
     };
   }, []);
   return [uploading, isOver];
