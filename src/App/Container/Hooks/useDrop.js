@@ -45,10 +45,10 @@ function useDrop(ref, onLoad = () => {}) {
     target.addEventListener('dragleave', dragLeaveHandler, true);
     target.addEventListener('drop', dropHandler, true);
     return () => {
-      target.addEventListener('dragenter', stopDefault);
-      target.removeEventListener('dragover', dragOverHandler);
-      target.removeEventListener('dragleave', dragLeaveHandler);
-      target.removeEventListener('drop', dropHandler);
+      target.removeEventListener('dragenter', stopDefault, true);
+      target.removeEventListener('dragover', dragOverHandler, true);
+      target.removeEventListener('dragleave', dragLeaveHandler, true);
+      target.removeEventListener('drop', dropHandler, true);
     };
   }, []);
   return [uploading, isOver];
