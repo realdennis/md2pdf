@@ -1,5 +1,4 @@
-export const initialText = `
-# Markdown2PDF 
+export const initialText = `# Markdown2PDF 
 https://md2pdf.netlify.com/
 > Awesome Markdown to PDF!
 \`\`\`diff
