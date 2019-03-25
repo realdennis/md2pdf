@@ -6,13 +6,6 @@ import Markdown from './index.js';
 // afterEach(cleanup);
 // duplicate of setupTests.js
 test('<Markdown /> Previewer lazy load should work', async () => {
-  global.document.body.createTextRange = () => {
-    return {
-      setEnd: () => {},
-      setStart: () => {},
-      getBoundingClientRect: () => {}
-    };
-  };
   const { container } = render(
     <Provider inject={[TextContainer]}>
       <Markdown />
