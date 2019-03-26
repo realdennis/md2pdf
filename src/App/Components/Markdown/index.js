@@ -1,20 +1,20 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useProvided } from 'nonaction';
-import { TextContainer, FileTextContainer } from '../../Container';
+import { TextContainer } from '../../Container';
 import Previewer from './Previewer';
 import Editor from './Editor';
 import DragBar from './DragBar.js';
 import 'github-markdown-css';
 import useDrop from '../../Container/Hooks/useDrop.js';
+import uploadFile from '../../Lib/uploadFile.js'
 const Markdown = ({ className }) => {
   const [text, setText] = useProvided(TextContainer);
-  const [, setFileText] = useProvided(FileTextContainer);
   const [isDrag, setDrag] = useState(false);
   const [startX, setStartX] = useState(0);
   const [width, setWidth] = useState(window.innerWidth / 2);
   const markdownRef = useRef(null);
-  const [uploading, isOver] = useDrop(markdownRef, setFileText);
+  const [uploading, isOver] = useDrop(markdownRef, uploadFile);
   // Partial fileText & text
 
   return (

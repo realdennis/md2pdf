@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, waitForElement } from 'react-testing-library';
 import { Provider } from 'nonaction';
-import { TextContainer, FileTextContainer } from '../../Container';
+import { TextContainer } from '../../Container';
 import Markdown from './index.js';
 // afterEach(cleanup);
 // duplicate of setupTests.js
 test('<Markdown /> Previewer lazy load should work', async () => {
   const { container } = render(
-    <Provider inject={[TextContainer, FileTextContainer]}>
+    <Provider inject={[TextContainer]}>
       <Markdown />
     </Provider>
   );

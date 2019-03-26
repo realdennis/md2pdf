@@ -1,12 +1,8 @@
 import React from 'react';
 import useEventTarget from 'use-event-target';
-import { useProvided } from 'nonaction';
-import { FileTextContainer } from '../../Container';
-
+import uploadFile from '../../Lib/uploadFile.js';
 const useReader = useEventTarget(new FileReader());
-
 export default props => {
-  const [, setFileText] = useProvided(FileTextContainer);
   const [reader] = useReader('load', evt => {
     if (evt.target.readyState !== 2) return;
     if (evt.target.error) {
@@ -14,7 +10,7 @@ export default props => {
       return;
     }
     const content = evt.target.result;
-    setFileText(content);
+    uploadFile(content);
   });
   const onChange = e => {
     const files = e.currentTarget.files;
