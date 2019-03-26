@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, waitForElement } from 'react-testing-library';
 import { Provider } from 'nonaction';
-import { TextContainer } from '../../Container';
+import { TextContainer, FileTextContainer } from '../../Container';
 import Markdown from './index.js';
 // afterEach(cleanup);
 // duplicate of setupTests.js
 test('<Markdown /> Previewer lazy load should work', async () => {
   const { container } = render(
-    <Provider inject={[TextContainer]}>
+    <Provider inject={[TextContainer, FileTextContainer]}>
       <Markdown />
     </Provider>
   );
@@ -16,10 +16,9 @@ test('<Markdown /> Previewer lazy load should work', async () => {
   );
   // Test Lazy load component using `waitforElement`!
   // const Content = Previewer.querySelector('span');
-  expect(Previewer.textContent!=='').toEqual(true);
+  expect(Previewer.textContent !== '').toEqual(true);
   //Test Lazy load
 });
-
 
 // const Editor = container.querySelector('.CodeMirror');
 // Editor.CodeMirror.setValue should make editor change.

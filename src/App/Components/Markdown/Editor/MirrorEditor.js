@@ -5,16 +5,19 @@ import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/darcula.css';
 import 'codemirror/mode/gfm/gfm.js';
 import { initialText } from '../../../Container/Hooks/InitialText';
+import { FileTextContainer } from '../../../Container';
+import { useProvided } from 'nonaction';
 // import 'codemirror/addon/edit/closebrackets.js';
 // import 'codemirror/addon/edit/matchbrackets';
 // import 'codemirror/addon/search/search.js';
 // import 'codemirror/addon/search/searchcursor.js'
 // import 'codemirror/addon/dialog/dialog.js';
 const Editor = ({ className, setText }) => {
+  const [fileText] = useProvided(FileTextContainer);
   return (
     <CodeMirror
       className={className}
-      value={initialText}
+      value={fileText === '' ? initialText : fileText}
       options={{
         mode: 'gfm',
         theme: 'darcula',
