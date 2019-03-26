@@ -25,7 +25,7 @@ const Header = ({ className }) => {
           <span>Transform</span>
         </p>
       </div>
-      <span className="author">Powered by @realdennis</span>
+      {/* <span className="author">Powered by @realdennis</span> */}
     </header>
   );
 };
@@ -70,14 +70,15 @@ export default styled(Header)`
     }
   }
 
-  span.author {
+  /* span.author {
     position: fixed;
     bottom: 2px;
     left: 2px;
     opacity: 0.5;
     color: white;
     height: 20px;
-  }
+    z-index:99;
+  } */
   @keyframes dance {
     0% {
       transform: rotate(3deg);

@@ -1,21 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import EditArea from './EditArea.js';
-
-const Editor = ({ className, text, setText, width }) => {
+// import EditArea from './EditArea.js';
+import Mirror from './MirrorEditor.js';
+const Editor = ({ className,  setText, width }) => {
   return (
     <div style={{ width }} className={className}>
-      <EditArea text={text} setText={setText}>
-        {text}
-      </EditArea>
+      <Mirror setText={setText}/>
     </div>
   );
 };
 export default styled(Editor)`
   flex-shrink: 0;
-  padding-left: 15px;
-  padding-bottom: 20px;
+  height: 100%;
   width: 50%;
-  background-color: #282c35;
   color: rgb(204, 204, 204);
 `;

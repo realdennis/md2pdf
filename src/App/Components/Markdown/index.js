@@ -18,7 +18,7 @@ const Markdown = ({ className }) => {
   return (
     <div
       ref={markdownRef}
-      style={{ opacity: isOver||uploading ? 0.5 : 1 }}
+      style={{ opacity: isOver || uploading ? 0.5 : 1 }}
       className={className}
       onMouseMove={e => {
         if (!isDrag) return;
@@ -26,9 +26,7 @@ const Markdown = ({ className }) => {
         setWidth(pageX - startX);
       }}
     >
-      <Editor className="no-print" width={width} text={text} setText={setText}>
-        {text}
-      </Editor>
+      <Editor className="no-print" width={width} setText={setText} />
       <DragBar
         className="no-print"
         isDrag={isDrag}
