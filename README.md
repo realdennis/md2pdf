@@ -5,6 +5,7 @@ https://md2pdf.netlify.com/
 
 ![It just works!](https://media.giphy.com/media/MuAtuqUGnn2PKsXhs6/giphy.gif)
 
+![Upload](https://media.giphy.com/media/cZ1f4b46P3LGszuXuy/giphy.gif)
 
 > Awesome Markdown to PDF!
 ```diff
