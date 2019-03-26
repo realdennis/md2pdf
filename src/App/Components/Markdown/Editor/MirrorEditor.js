@@ -13,11 +13,16 @@ import { useProvided } from 'nonaction';
 // import 'codemirror/addon/search/searchcursor.js'
 // import 'codemirror/addon/dialog/dialog.js';
 const Editor = ({ className, setText }) => {
-  const [fileText] = useProvided(FileTextContainer);
+  const [fileText, setFileText] = useProvided(FileTextContainer);
+  if (fileText !== '') {
+    //Workaround for file input
+    document.querySelector('.CodeMirror').CodeMirror.setValue(fileText);
+    setFileText('');
+  }
   return (
     <CodeMirror
       className={className}
-      value={fileText === '' ? initialText : fileText}
+      value={initialText}
       options={{
         mode: 'gfm',
         theme: 'darcula',
