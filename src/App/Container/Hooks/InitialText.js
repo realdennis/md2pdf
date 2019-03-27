@@ -15,7 +15,7 @@ https://md2pdf.netlify.com/
 
 ## Tips
 - \`Resize\` the layout what you want.
-- After click \`Transfom\` button, inverse the checkbox of **'Headers and Footers'**. 
+- After click \`Transform\` button, inverse the checkbox of **'Headers and Footers'**. 
 - **反選頁首與頁尾**.
 
 ## What's special?
