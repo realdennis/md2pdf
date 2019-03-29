@@ -1,5 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c4c9c07a-bd99-4382-8b19-4ae3abc8f104/deploy-status)](https://app.netlify.com/sites/md2pdf/deploys)
-[![CircleCI](https://circleci.com/gh/realdennis/md2pdf.svg?style=svg)](https://circleci.com/gh/realdennis/md2pdf)
+
 # Markdown2PDF 
 https://md2pdf.netlify.com/
 
@@ -29,3 +29,6 @@ https://md2pdf.netlify.com/
 - You can use <span style="color:#0984e3">html</span> tag!
 <blockquote>Hey I'm in blockquote!</blockquote>
 
+---
+
+LICENSE MIT © 2019 realdennis
