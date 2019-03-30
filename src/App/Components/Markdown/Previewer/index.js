@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import styled from 'styled-components';
 import Loading from './Loading';
+import ErrorBoundary from './ErrorBoundary.js';
 import 'github-markdown-css';
 const Wrapper = styled.div`
   overflow-y: scroll;
@@ -12,13 +13,15 @@ const Wrapper = styled.div`
     overflow-y: hidden;
   }
 `;
-const LazyPreivew = lazy(() => import('./Preview.js'));
+const LazyPreview = lazy(() => import('./Preview.js'));
 export default ({ source, children }) => {
   return (
-    <Suspense fallback={<Loading duration={0.5} />}>
-      <Wrapper className="preview  markdown-body">
-        <LazyPreivew source={source}>{children}</LazyPreivew>
-      </Wrapper>
-    </Suspense>
+    <ErrorBoundary>
+      <Suspense fallback={<Loading duration={0.5} />}>
+        <Wrapper className="preview  markdown-body">
+          <LazyPreview source={source}>{children}</LazyPreview>
+        </Wrapper>
+      </Suspense>
+    </ErrorBoundary>
   );
 };
