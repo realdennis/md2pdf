@@ -1,8 +1,7 @@
-import { renderHook, cleanup, act } from 'react-hooks-testing-library';
+import { renderHook, cleanup, act } from '@testing-library/react-hooks';
 import useText from './useText';
 import { initialText } from './InitialText';
 
-afterEach(cleanup);
 test('should set initial', () => {
   const { result } = renderHook(() => useText());
   expect(result.current[0]).toEqual(initialText);

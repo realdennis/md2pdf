@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForElement } from 'react-testing-library';
+import { render, waitForElement } from '@testing-library/react';
 import { Provider } from 'nonaction';
 import { TextContainer } from '../../Container';
 import Markdown from './index.js';

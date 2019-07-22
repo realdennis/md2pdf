@@ -10,21 +10,22 @@
   "dependencies": {
     "codemirror": "^5.45.0",
     "github-markdown-css": "3.0.1",
-    "highlight.js": "9.15.6",
-    "nonaction": "0.0.4",
+    "highlight.js": "9.15.8",
+    "nonaction": "0.0.5",
     "normalize.css": "8.0.1",
-    "react": "16.8.3",
-    "react-codemirror2": "^5.1.0",
-    "react-dom": "16.8.3",
+    "react": "16.8.6",
+    "react-codemirror2": "^6.0.0",
+    "react-dom": "16.8.6",
     "react-remarkable": "1.1.3",
-    "react-scripts": "^2.1.8",
-    "styled-components": "4.1.3",
+    "react-scripts": "^3.0.1",
+    "styled-components": "4.3.2",
     "use-event-target": "^1.2.0"
   },
   "devDependencies": {
-    "react-hooks-testing-library": "^0.3.7",
-    "react-testing-library": "^6.0.1",
-    "source-map-explorer": "^1.8.0"
+    "@testing-library/react": "^8.0.5",
+    "@testing-library/react-hooks": "^1.1.0",
+    "react-test-renderer": "^16.8.6",
+    "source-map-explorer": "^2.0.1"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
