@@ -15,9 +15,6 @@ const UnwrappedDragBar = ({ className, setDrag, setStartX }) => {
         setDrag(true);
         dragStart(e);
       }}
-      onMouseUp={() => {
-        setDrag(false);
-      }}
     />
   );
 };
