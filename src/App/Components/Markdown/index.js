@@ -50,6 +50,6 @@ export default styled(Markdown)`
   * {
     box-sizing: border-box;
   }
-  height: 100%;
+  height: calc(100% - 40px);
   display: flex;
 `;
