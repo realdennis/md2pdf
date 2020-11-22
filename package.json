@@ -11,6 +11,7 @@
     "@snowpack/plugin-sass": "^1.1.1",
     "@vanillawc/wc-codemirror": "^1.9.1",
     "codemirror": "^5.58.3",
+    "lodash-es": "^4.17.15",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

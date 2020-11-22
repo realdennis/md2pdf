@@ -34,8 +34,10 @@
     }
     width: 50%;
   }
-  .previewer {
+  .viewer {
     width: 50%;
+    word-break: break-all;
+    overflow: scroll;
   }
   .drag-bar {
     width: 15px;
