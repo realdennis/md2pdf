@@ -5,6 +5,7 @@ module.exports = {
       src: "/_dist_",
     },
     plugins: [
+      ["@snowpack/plugin-sass"]
       /* ... */
     ],
     install: [

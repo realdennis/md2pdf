@@ -1,0 +1,46 @@
+#md2pdf.app {
+  font-family: 微軟正黑體, sans-serif;
+  height: 100%;
+  background-color: rgb(233, 233, 233);
+  header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    .headline {
+      font-weight: bold;
+      margin: 5px;
+      // flex-shrink: 0;
+      font-size: 1em;
+      height: 20px;
+    }
+  }
+  main {
+    height: calc(100% - 40px);
+    display: flex;
+    & > * {
+      height: 100%;
+    }
+  }
+  .editor {
+    wc-codemirror {
+      height: 100%;
+      .CodeMirror {
+        height: 100%;
+        font-size: 16px;
+      }
+      .CodeMirror-wrap pre {
+        word-break: break-word;
+      }
+    }
+    width: 50%;
+  }
+  .previewer {
+    width: 50%;
+  }
+  .drag-bar {
+    width: 15px;
+    &:hover {
+      background-color: rgb(9, 132, 227);
+    }
+  }
+}

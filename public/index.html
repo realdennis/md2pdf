@@ -11,9 +11,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'UA-113872741-7');
+      gtag("config", "UA-113872741-7");
     </script>
 
     <!--For Facebook-->
@@ -23,7 +23,10 @@
       name="og:description"
       content="Awesome Markdown to PDF! Still upload resume.md to stranger server? Try this Offline Web App!"
     />
-    <meta name="Description" content="Offline Markdown to PDF! Choose & Edit & Transform without any network requests.">
+    <meta
+      name="Description"
+      content="Offline Markdown to PDF! Choose & Edit & Transform without any network requests."
+    />
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -33,11 +36,19 @@
     <link rel="manifest" href="/manifest.json" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <title>md2pdf - Markdown to PDF</title>
+    <style>
+      html,body {
+        height:100%;
+      }
+    </style>
+    <script type="module" src="/_dist_/css/index.js"></script>
+    <link href="/_dist_/css/app.css" rel="stylesheet" />
+    <script type="module" src="/_dist_/js/codemirror.js"></script>
   </head>
 
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
-    <div id="root">
+    <div id="md2pdf" class="app">
       <header>
         <h1 class="headline">md2pdf</h1>
         <div class="social-shares"></div>
@@ -45,9 +56,15 @@
       </header>
       <main>
         <div class="editor">
-          <!-- codemirrow webcomponents -->
+          <wc-codemirror mode="gfm" theme="darcula">
+            <script type="wc-content">
+            
+            </script>
+          </wc-codemirror>
         </div>
-        <div class="drag-bar"></div>
+        <div class="drag-bar">
+          <!-- Too control the editor and viewer -->
+        </div>
         <div class="viewer">
           <!-- Github style markdown render -->
         </div>
