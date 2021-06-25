@@ -6,6 +6,7 @@
     "markdown",
     "pdf"
   ],
+  "homepage": "./",
   "main": "src/index.js",
   "dependencies": {
     "codemirror": "^5.45.0",
