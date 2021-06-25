@@ -3,10 +3,8 @@ name: "Test case"
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
-    branches:
-      - main
 
 jobs:
   test:
