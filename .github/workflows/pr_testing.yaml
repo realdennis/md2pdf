@@ -1,9 +1,6 @@
-name: "Test case"
+name: "PR Testing"
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
 
 jobs:
