@@ -21,7 +21,19 @@
     "react-remarkable": "1.1.3",
     "react-scripts": "^3.0.1",
     "styled-components": "4.3.2",
-    "use-event-target": "^1.2.0"
+    "use-event-target": "^1.2.0",
+    "workbox-background-sync": "^5.1.3",
+    "workbox-broadcast-update": "^5.1.3",
+    "workbox-cacheable-response": "^5.1.3",
+    "workbox-core": "^5.1.3",
+    "workbox-expiration": "^5.1.3",
+    "workbox-google-analytics": "^5.1.3",
+    "workbox-navigation-preload": "^5.1.3",
+    "workbox-precaching": "^5.1.3",
+    "workbox-range-requests": "^5.1.3",
+    "workbox-routing": "^5.1.3",
+    "workbox-strategies": "^5.1.3",
+    "workbox-streams": "^5.1.3"
   },
   "devDependencies": {
     "@testing-library/react": "^8.0.5",
