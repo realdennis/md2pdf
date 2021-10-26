@@ -2864,11 +2864,6 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
-create-event-target-hook@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/create-event-target-hook/-/create-event-target-hook-1.2.2.tgz#43083aa597a292e82ea68ea0f2501aaf1e5ee8b0"
-  integrity sha512-ReLY5B/7hqkU+WlbbyQOzYtUCqDsBg75RjguLTpx3RI4WXGPqisePWtm+OpUZWLSZF109CIXVglT2Y3CSCuGOg==
-
 create-hash@^1.1.0, create-hash@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/create-hash/-/create-hash-1.2.0.tgz#889078af11a63756bcfb59bd221996be3a9ef196"
@@ -9665,13 +9660,6 @@ url@^0.11.0:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
-
-use-event-target@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/use-event-target/-/use-event-target-1.2.1.tgz#76085e5bd816a7b3b4a138bf8eccc155f8080137"
-  integrity sha512-8UrF+k8nAgsPZRIQUc5vh1ZB+Pao5wvO4yJXagfHUqSySvwe2sasqCR/bftqqkwUsrx/Ei7DmKE5J9tDyRD4hw==
-  dependencies:
-    "@babel/preset-react" "^7.0.0"
 
 use@^3.1.0:
   version "3.1.1"
