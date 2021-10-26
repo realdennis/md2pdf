@@ -1,20 +1,22 @@
 import React from 'react';
-import useEventTarget from 'use-event-target';
 import uploadFile from '../../Lib/uploadFile.js';
-const useReader = useEventTarget(new FileReader());
+
 export default props => {
-  const [reader] = useReader('load', evt => {
-    if (evt.target.readyState !== 2) return;
-    if (evt.target.error) {
-      alert('Error while reading file');
-      return;
-    }
-    const content = evt.target.result;
-    uploadFile(content);
-  });
   const onChange = e => {
     const files = e.currentTarget.files;
-    files.length > 0 && reader.readAsText(files[0]);
+    if (files.length > 0) {
+      const reader = new FileReader();
+      reader.onload = loadEvent => { 
+        if (loadEvent.target.readyState !== 2) return;
+        if (loadEvent.target.error) {
+          alert('Error while reading file');
+          return;
+        }
+        const content = loadEvent.target.result;
+        uploadFile(content);
+      };
+      reader.readAsText(e.target.files[0]);
+    }
   };
   return (
     <p {...props} style={{ position: 'relative' }}>

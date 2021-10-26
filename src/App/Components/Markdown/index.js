@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useProvided } from 'nonaction';
 import { TextContainer } from '../../Container';
@@ -8,8 +8,6 @@ import DragBar from './DragBar.js';
 import 'github-markdown-css';
 import useDrop from '../../Container/Hooks/useDrop.js';
 import uploadFile from '../../Lib/uploadFile.js';
-import createEventTargetHook from 'create-event-target-hook';
-const useWindowEvent = createEventTargetHook(window);
 
 const Markdown = ({ className }) => {
   const [text, setText] = useProvided(TextContainer);
@@ -20,7 +18,13 @@ const Markdown = ({ className }) => {
   const [uploading, isOver] = useDrop(markdownRef, uploadFile);
   // Partial fileText & text
 
-  useWindowEvent('mouseup', () => setDrag(false));
+  useEffect(() => {
+    const handleMouseUp = () => setDrag(false);
+    document.addEventListener('mouseup', handleMouseUp);
+    return () => {
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, []);
   // The state `isDrag` must be false, when mouse up!
   // So we listen it in window! (Seems ugly, but it just works ha.)
   return (
