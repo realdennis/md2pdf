@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 const unWrappedLoading = ({ className }) => {
   return (
-    <div className={className}>
+    <div className={className} id="suspense-loading">
       <p />
       <p />
       <p />
@@ -25,12 +25,12 @@ export default styled(unWrappedLoading)`
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: load;
-    animation-duration: ${props => props.duration + 's'};
+    animation-duration: ${(props) => props.duration + 's'};
     &:nth-child(1) {
-      animation-delay: ${props => props.duration / 3 + 's'};
+      animation-delay: ${(props) => props.duration / 3 + 's'};
     }
     &:nth-child(2) {
-      animation-delay: ${props => (2 * props.duration) / 3 + 's'};
+      animation-delay: ${(props) => (2 * props.duration) / 3 + 's'};
     }
   }
   @keyframes load {

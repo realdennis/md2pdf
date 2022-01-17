@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForElement } from '@testing-library/react';
+import { render, waitForElementToBeRemoved } from '@testing-library/react';
 import { Provider } from 'nonaction';
 import { TextContainer } from '../../Container';
 import Markdown from './index.js';
@@ -11,8 +11,8 @@ test('<Markdown /> Previewer lazy load should work', async () => {
       <Markdown />
     </Provider>
   );
-  const Previewer = await waitForElement(() =>
-    container.querySelector('.preview')
+  const Previewer = await waitForElementToBeRemoved(() =>
+    container.querySelector('#suspense-loading')
   );
   // Test Lazy load component using `waitforElement`!
   // const Content = Previewer.querySelector('span');
