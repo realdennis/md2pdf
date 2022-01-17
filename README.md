@@ -19,16 +19,14 @@ https://realdennis.github.io/md2pdf/
 ```
 
 ## How to use md2pdf?
-1. Click button choose `.md` file.
+1. Click **Choose** to upload an *.md* file.
 2. Edit in editor (left panel).
 3. Click **Transform**!
-4. Switch 'Destination' to **Save as PDF**.
-4. **Chrome recommended**
+4. Switch 'Destination' to **Save as PDF** (as eg. in Chrome) or to any locally installed PDF creator (Adobe etc.).
 
 ## Tips
-- `Resize` the layout what you want.
-- After click `Transform` button, inverse the checkbox of **'Headers and Footers'**. 
-- **反選頁首與頁尾**.
+- Adjust `Paper size` and other settings in your PDF printing options (if available).
+- Unselect or adjust `Header` and `Footer` in your PDF printing options (if available).
 
 ## What's special?
 - You can use <span style="color:#0984e3">html</span> tag!
