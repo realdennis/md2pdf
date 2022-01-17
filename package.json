@@ -9,16 +9,16 @@
   "homepage": "./",
   "main": "src/index.js",
   "dependencies": {
-    "codemirror": "^5.45.0",
+    "codemirror": "^5.65.0",
     "github-markdown-css": "3.0.1",
     "highlight.js": "9.15.8",
     "nonaction": "0.0.5",
     "normalize.css": "8.0.1",
     "react": "16.8.6",
-    "react-codemirror2": "^6.0.0",
+    "react-codemirror2": "^6.0.1",
     "react-dom": "16.8.6",
     "react-remarkable": "1.1.3",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^3.4.4",
     "styled-components": "4.3.2",
     "workbox-background-sync": "^5.1.3",
     "workbox-broadcast-update": "^5.1.3",
@@ -34,10 +34,10 @@
     "workbox-streams": "^5.1.3"
   },
   "devDependencies": {
-    "@testing-library/react": "^8.0.5",
+    "@testing-library/react": "^8.0.9",
     "@testing-library/react-hooks": "^1.1.0",
-    "react-test-renderer": "^16.8.6",
-    "source-map-explorer": "^2.0.1"
+    "react-test-renderer": "^16.14.0",
+    "source-map-explorer": "^2.5.2"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
