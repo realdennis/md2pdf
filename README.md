@@ -3,6 +3,7 @@
 ![Deploy gh-pages](https://github.com/realdennis/md2pdf/actions/workflows/deploy.yaml/badge.svg)
 
 # Markdown2PDF 
+English | [简体中文(Simplified Chinese)](./README_zh.md)  
 https://md2pdf.netlify.com/
 
 https://realdennis.github.io/md2pdf/
