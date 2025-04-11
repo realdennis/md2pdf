@@ -22,8 +22,8 @@ const Header = ({ className }) => {
   };
   return (
     <header className={className + " no-print"}>
-      <p className="project"> md2pdf </p>
-      
+      <p className="project"> <a href="https://github.com/realdennis/md2pdf" title="@realdennis' md2pdf github" target="_blank">md2pdf</a></p>
+
       <div className="menu">
         <UploadButton className="button upload" />
         <p className="button download" onClick={onTransfrom}>
