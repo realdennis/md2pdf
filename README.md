@@ -1,40 +1,19 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c4c9c07a-bd99-4382-8b19-4ae3abc8f104/deploy-status)](https://app.netlify.com/sites/md2pdf/deploys)
+# Markdown2PDF  
 
-![Deploy gh-pages](https://github.com/realdennis/md2pdf/actions/workflows/deploy.yaml/badge.svg)
+A fast, offline Markdown to PDF conversion app that works directly in your browser.
 
-# Markdown2PDF 
-English | [简体中文(Simplified Chinese)](./README_cn.md) | [繁體中文(Traditional Chinese)](./README_tc.md)  
-https://md2pdf.netlify.com/
-
-https://realdennis.github.io/md2pdf/
-
-
-![It just works!](https://media.giphy.com/media/MuAtuqUGnn2PKsXhs6/giphy.gif)
-
-![Upload](https://media.giphy.com/media/cZ1f4b46P3LGszuXuy/giphy.gif)
-
-> Awesome Markdown to PDF!
-```diff
-- Online? Upload resume.md to stranger server?
-+ Try Offline Web App!
-```
-
-## How to use md2pdf?
-1. Click button choose `.md` file.
-2. Edit in editor (left panel).
-3. Click **Transform**!
-4. Switch 'Destination' to **Save as PDF**.
-4. **Chrome recommended**
-
-## Tips
-- `Resize` the layout what you want.
-- After click `Transform` button, inverse the checkbox of **'Headers and Footers'**. 
-- **反選頁首與頁尾**.
-
-## What's special?
-- You can use <span style="color:#0984e3">html</span> tag!
-<blockquote>Hey I'm in blockquote!</blockquote>
+This is a fork of [this project](https://github.com/realdennis/md2pdf). Thanks to @realdennis for the original work.
 
 ---
 
-LICENSE MIT © 2019 realdennis
+**DONE**
+
+- Updated Yarn dependencies.
+- Upgraded React from v16 to v18.
+
+**TODO**
+
+- Improve UI
+- Improve icons
+- Improve responsiveness
+- Add new markdown text for first-load preview
