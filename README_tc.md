@@ -4,7 +4,7 @@
 
 # Markdown2PDF 
 [English](./README.md) | [简体中文(Simplified Chinese)](./README_cn.md) | 繁體中文(Traditional Chinese)  
-https://md2pdf.netlify.com/
+https://md2pdf.netlify.app/
 
 https://realdennis.github.io/md2pdf/
 
