@@ -36,13 +36,14 @@
   "devDependencies": {
     "@testing-library/react": "^8.0.9",
     "@testing-library/react-hooks": "^1.1.0",
+    "cross-env": "^7.0.3",
     "react-test-renderer": "^16.14.0",
     "source-map-explorer": "^2.5.2"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
