@@ -1,9 +1,6 @@
 export const initialText = `# Markdown2PDF  
-> Convert Markdown to PDF — fast & private!
+> Fast and private Markdown to PDF conversion.
 
-```diff
-- Upload to random server?
-+ Use Offline Web App!
-```
+*This web app works offline too!*
 
 `;
