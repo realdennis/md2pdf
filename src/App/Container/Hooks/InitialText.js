@@ -1,11 +1,9 @@
-export const initialText = `# Markdown2PDF 
-Offline Web App!
+export const initialText = `# Markdown2PDF  
+> Convert Markdown to PDF — fast & private!
 
-## How to use md2pdf?
-1. Click button choose \`.md\` file.
-2. Edit in editor (left panel).
-3. Click **Transform**!
-4. Switch 'Destination' to **Save as PDF**.
-4. **Chrome recommended**
+```diff
+- Upload to random server?
++ Use Offline Web App!
+```
 
 `;
