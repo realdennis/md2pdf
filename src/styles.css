@@ -3,3 +3,7 @@ body,
 #root {
   height: 100%;
 }
+
+.markdown-body {
+  font-size: 14px;
+}
