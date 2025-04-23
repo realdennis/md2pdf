@@ -41,9 +41,9 @@ export default props => {
         }}
       />
       <span role="img" aria-label="upload">
-        📁
+      ⬆️
       </span>
-      <span>Choose</span>
+      <span>Import .md file</span>
     </p>
   );
 };

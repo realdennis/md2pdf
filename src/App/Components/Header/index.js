@@ -28,12 +28,12 @@ const Header = ({ className }) => {
         <UploadButton className="button upload" />
         <p className="button download" onClick={onTransfrom}>
           <span role="img" aria-label="download">
-            🎉
+          ⬇️
           </span>
-          <span>Transform</span>
+          <span>Export to .pdf</span>
         </p>
       </div>
-      {/* <span className="author">Powered by @realdennis</span> */}
+      {}
     </header>
   );
 };
