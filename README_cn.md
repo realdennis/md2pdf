@@ -1,11 +1,7 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c4c9c07a-bd99-4382-8b19-4ae3abc8f104/deploy-status)](https://app.netlify.com/sites/md2pdf/deploys)
-
 ![Deploy gh-pages](https://github.com/realdennis/md2pdf/actions/workflows/deploy.yaml/badge.svg)
 
 # Markdown2PDF 
 [English](./README.md) | 简体中文(Simplified Chinese) | [繁體中文(Traditional Chinese)](./README_tc.md)  
-https://md2pdf.netlify.app/
-
 https://realdennis.github.io/md2pdf/
 
 
